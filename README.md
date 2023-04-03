@@ -8,3 +8,11 @@
 
 ## localhost:20002
 - mock for the okta server
+
+# start up
+```
+
+cd app-mock && npm install
+cd .. && npm install && npm run start
+
+```
