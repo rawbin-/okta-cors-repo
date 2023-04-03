@@ -1,0 +1,20 @@
+{
+  "name": "okta-cors-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start-all",
+    "start-all": "npm run start-okta && npm run start-gateway && npm run start-app",
+    "start-okta": "pm2 start okta-mock/index.js --name okta",
+    "start-gateway": "pm2 start gateway-mock/index.js --name gateway",
+    "start-app": "cd app-mock && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pm2": "^5.3.0"
+  }
+}
